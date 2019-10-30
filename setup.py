@@ -10,7 +10,7 @@ os.environ['TK_LIBRARY'] = os.path.join(PYTHON_INSTALL_DIR, 'tcl', 'tk8.6')
 
 sys.argv.append("build")
 filename="TwitBot.py"
-icon="TwitBot-Icon.ico"
+icon="Twit.ico"
 
 base = None
 
@@ -23,7 +23,7 @@ options={
 if sys.platform=="win64":
     base="Win64GUI"
 
-exe = Executable(script='TwitBot.py', base = base, icon="TwitBot-Icon.ico")
+exe = Executable(script='TwitBot.py', base = base, icon="Twit.ico")
 
 additional_mods = ['numpy.core._methods', 'numpy.lib.format']
 
