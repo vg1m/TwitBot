@@ -50,6 +50,8 @@ c.Limit = 5
 c.Output = "Tweets.csv"
 twint.run.Search(c)
 
+print("-" *50)
+
 toaster.show_toast("Tweet Fetch Complete",
                             "Starting Sentiment Analysis",
                             icon_path="Twit.ico",
@@ -66,7 +68,7 @@ def sentiment_scores(sentence):
     # oject gives a sentiment dictionary. 
     # which contains pos, neg, neu, and compound scores. 
     sentiment_dict = sid_obj.polarity_scores(sentence) 
-      
+    print("\n")
     print("Overall sentiment dictionary is : ", sentiment_dict) 
     print("sentence was rated as ", sentiment_dict['neg']*100, "% Negative") 
     print("sentence was rated as ", sentiment_dict['neu']*100, "% Neutral") 
@@ -109,5 +111,11 @@ if __name__ == "__main__" :
             print(sentiment_scores(sentence) )
             count=count+1
             noneTypeCount = 0
+print("\n")
+print("-" *50)
+print("\n")            
+print("TwitBot will automatically close in 5 minutes")
+time.sleep(301)
+sys.exit()
   
             
